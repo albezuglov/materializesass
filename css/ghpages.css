@@ -397,7 +397,7 @@ ul {
   ul li {
     list-style-type: none; }
 
-nav, #download-button, #nav-mobile {
+nav, #download-button, ul#nav-mobile {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
 #download-button:hover {
@@ -605,6 +605,20 @@ nav {
     font-size: 2rem;
     height: 56px;
     line-height: 56px; }
+  nav #logo-container {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+    white-space: nowrap; }
+    nav #index-banner h4#logo-container, #index-banner nav h4#logo-container, nav .banner-container div#logo-container, .banner-container nav div#logo-container {
+      left: 50%;
+      transform: translateX(-50%); }
+    @media only screen and (max-width: 992px) {
+      nav #logo-container {
+        left: 50%;
+        transform: translateX(-50%); } }
   nav ul {
     margin: 0; }
     nav ul li {
@@ -1273,7 +1287,7 @@ select {
 /***************
     Nav List
 ***************/
-#nav-mobile {
+ul#nav-mobile {
   position: fixed;
   width: 240px;
   left: -105%;
@@ -1287,36 +1301,36 @@ select {
   z-index: 999;
   overflow-y: auto;
   will-change: left; }
-  #nav-mobile li {
+  ul#nav-mobile li {
     float: none;
     line-height: 64px; }
-  #nav-mobile a {
+  ul#nav-mobile a {
     color: #444;
     display: block;
     font-size: 1rem;
     height: 64px;
     line-height: 64px;
     padding: 0 30px; }
-    #nav-mobile a:hover {
+    ul#nav-mobile a:hover {
       background-color: rgba(0, 0, 0, 0.05); }
-    #nav-mobile a#download-button, #nav-mobile a#download-button, #nav-mobile a#github-button {
+    ul#nav-mobile a#download-button, ul#nav-mobile a#download-button, ul#nav-mobile a#github-button {
       margin: 10px 15px; }
-    #nav-mobile a#download-button, #nav-mobile a#download-button {
+    ul#nav-mobile a#download-button, ul#nav-mobile a#download-button {
       color: #fff; }
-    #nav-mobile a#github-button {
+    ul#nav-mobile a#github-button {
       color: #343434; }
-    #nav-mobile a#download-button:hover, #nav-mobile a#download-button:hover {
+    ul#nav-mobile a#download-button:hover, ul#nav-mobile a#download-button:hover {
       background-color: #2bbbad; }
-#nav-mobile a {
+ul#nav-mobile a {
   display: block;
   padding: 0 30px;
   color: #444; }
 
-#nav-mobile {
+ul#nav-mobile {
   left: 0;
   position: fixed; }
 @media only screen and (max-width: 992px) {
-  #nav-mobile {
+  ul#nav-mobile {
     left: -105%; } }
 #sidenav-overlay {
   position: fixed;
@@ -1713,26 +1727,26 @@ footer.example {
 /********************
   Index Page Styles
 ********************/
-ul.side-nav.fixed li.logo {
+ul#nav-mobile li.logo {
   text-align: center;
   margin-top: 32px;
   margin-bottom: 80px; }
-  ul.side-nav.fixed li.logo:hover {
+  ul#nav-mobile li.logo:hover {
     background-color: transparent; }
 
-ul.side-nav.fixed {
+ul#nav-mobile {
   overflow: hidden; }
-  ul.side-nav.fixed li {
+  ul#nav-mobile li {
     line-height: 44px; }
-    ul.side-nav.fixed li.active {
+    ul#nav-mobile li.active {
       background-color: rgba(0, 0, 0, 0.05); }
-    ul.side-nav.fixed li a {
+    ul#nav-mobile li a {
       font-size: 13px;
       line-height: 44px;
       height: 44px; }
-  ul.side-nav.fixed ul.collapsible-accordion {
+  ul#nav-mobile ul.collapsible-accordion {
     background-color: #FFF; }
-  ul.side-nav.fixed:hover {
+  ul#nav-mobile:hover {
     overflow-y: auto; }
 
 .bold > a {

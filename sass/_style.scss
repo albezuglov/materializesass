@@ -72,7 +72,7 @@ footer.example {
 ********************/
 
 // custom styled sidebar
-ul.side-nav.fixed li.logo {
+ul#nav-mobile li.logo {
   text-align: center;
   margin-top: 32px;
   margin-bottom: 80px;
@@ -81,7 +81,8 @@ ul.side-nav.fixed li.logo {
     background-color: transparent;
   }
 }
-ul.side-nav.fixed {
+ul#nav-mobile {
+  @extend %side-nav; @extend %fixed;
   overflow: hidden;
 
   li {
@@ -837,8 +838,7 @@ body.parallax-demo footer {
   width: 190px !important;
 }
 
-#nav-mobile { @extend %side-nav; @extend %fixed; }
-
+#logo-container { @extend %brand-logo; }
 // Search
 #nav-mobile li.search {
 
