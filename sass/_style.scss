@@ -29,7 +29,7 @@ nav {
   }
 }
 
-.header {
+%header {
   color: color("materialize-red", "lighten-2");
   font-weight: 300;
 }
@@ -64,6 +64,8 @@ footer.example {
   }
 }
 
+.container { @extend %container; }
+.row { @extend %row; }
 /********************
   Index Page Styles
 ********************/
@@ -201,10 +203,14 @@ a.button-collapse.top-nav {
   }
   h4 {
     margin-bottom: 40px;
+    @extend %header; @extend %col; @extend %s12; @extend %light; @extend %center;
   }
   h1 {
     margin-top: 16px;
+    @extend %header; @extend %center-on-small-only;
   }
+
+  @extend %section; @extend %no-pad-bot;
 }
 @media #{$medium-and-down} {
   #index-banner {
@@ -496,7 +502,7 @@ $height: auto;
 .tabs-wrapper {
   position: relative;
   height: 48px;
-  @extend .hide-on-small-only;
+  @extend %hide-on-small-only;
 
   .row.pinned {
     position: fixed;
