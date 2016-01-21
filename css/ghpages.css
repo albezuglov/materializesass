@@ -397,7 +397,7 @@ ul {
   ul li {
     list-style-type: none; }
 
-nav, #download-button, ul#nav-mobile {
+nav, #nav-mobile li.search .search-wrapper, #download-button, ul#nav-mobile {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
 #download-button:hover {
@@ -734,6 +734,12 @@ small {
 #index-banner h4 {
   font-weight: 300; }
 
+#nav-mobile li.search .search-wrapper {
+  position: relative;
+  margin: 0.5rem 0 1rem 0;
+  background-color: #fff;
+  transition: box-shadow .25s;
+  border-radius: 2px; }
 #toast-container {
   display: block;
   position: fixed;
@@ -816,7 +822,7 @@ small {
  * Released under the MIT license
  * https://github.com/fians/Waves/blob/master/LICENSE
  */
-#download-button, #github-button {
+ul#nav-mobile li.bold a, #download-button, #github-button {
   position: relative;
   cursor: pointer;
   display: inline-block;
@@ -830,7 +836,7 @@ small {
   z-index: 1;
   will-change: opacity, transform;
   transition: all .3s ease-out; }
-  #download-button input[type="button"], #github-button input[type="button"], #download-button input[type="reset"], #github-button input[type="reset"], #download-button input[type="submit"], #github-button input[type="submit"] {
+  ul#nav-mobile li.bold a input[type="button"], #download-button input[type="button"], #github-button input[type="button"], ul#nav-mobile li.bold a input[type="reset"], #download-button input[type="reset"], #github-button input[type="reset"], ul#nav-mobile li.bold a input[type="submit"], #download-button input[type="submit"], #github-button input[type="submit"] {
     border: 0;
     font-style: normal;
     font-size: inherit;
@@ -838,6 +844,22 @@ small {
     background: none; }
 
 /* Firefox Bug: link not triggered */
+#nav-mobile .collapsible-body {
+  display: none;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box; }
+  #nav-mobile .collapsible-body p {
+    margin: 0;
+    padding: 2rem; }
+
+ul#nav-mobile .collapsible-body,
+ul#nav-mobile .collapsible-body {
+  border: 0;
+  background-color: #fff; }
+  ul#nav-mobile .collapsible-body li a,
+  ul#nav-mobile .collapsible-body li a {
+    padding: 0 37.5px 0 45px; }
+
 #materialbox-overlay {
   position: fixed;
   top: 0;
@@ -1743,7 +1765,8 @@ ul#nav-mobile {
     ul#nav-mobile li a {
       font-size: 13px;
       line-height: 44px;
-      height: 44px; }
+      height: 44px;
+      display: block !important; }
   ul#nav-mobile ul.collapsible-accordion {
     background-color: #FFF; }
   ul#nav-mobile:hover {
@@ -1753,7 +1776,7 @@ ul#nav-mobile {
   font-weight: bold; }
 
 #logo-container {
-  height: 57px;
+  height: 57px !important;
   margin-bottom: 32px; }
 
 nav.top-nav {
@@ -1762,6 +1785,11 @@ nav.top-nav {
   nav.top-nav a.page-title {
     line-height: 122px;
     font-size: 48px; }
+
+#nav-mobile .collapsible-body li.active {
+  background-color: #ee6e73; }
+  #nav-mobile .collapsible-body li.active a {
+    color: #fff; }
 
 a.button-collapse.top-nav {
   position: absolute;

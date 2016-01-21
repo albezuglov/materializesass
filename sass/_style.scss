@@ -96,6 +96,11 @@ ul#nav-mobile {
       font-size: 13px;
       line-height: 44px;
       height: 44px;
+      display: block !important;
+    }
+
+    &.bold {
+      a { @extend %waves-effect; @extend %waves-teal; }
     }
   }
 
@@ -114,7 +119,7 @@ ul#nav-mobile {
 }
 
 #logo-container {
-  height: 57px;
+  height: 57px !important;
   margin-bottom: 32px;
 }
 
@@ -127,6 +132,15 @@ nav.top-nav {
     font-size: 48px;
   }
 }
+
+#nav-mobile .collapsible-body {
+  @extend %collapsible-body;
+  li.active {
+    background-color: $primary-color;
+    a { color: $inverted-color; }
+  }
+}
+
 a.button-collapse.top-nav {
   position: absolute;
   text-align: center;
@@ -196,19 +210,19 @@ a.button-collapse.top-nav {
 }
 
 #index-banner {
-  background-color: color("materialize-red", "lighten-2");
+  background-color: $primary-color;
   .container {
     position: relative;
   }
   h4 {
     margin-bottom: 40px;
     @extend %header; @extend %col; @extend %s12; @extend %light; @extend %center;
-    color: #fff;
+    color: $inverted-color;
   }
   h1 {
     margin-top: 16px;
     @extend %header; @extend %center-on-small-only;
-    color: #fff;
+    color: $inverted-color;
   }
 
   @extend %section; @extend %no-pad-bot;
@@ -853,6 +867,7 @@ body.parallax-demo footer {
   z-index: 2;
 
   .search-wrapper {
+    @extend %card;
     &.focused { margin: 0; }
 
     margin: 0 12px;
