@@ -397,7 +397,7 @@ ul {
   ul li {
     list-style-type: none; }
 
-nav, #download-button {
+nav, #download-button, #nav-mobile {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
 #download-button:hover {
@@ -1273,6 +1273,51 @@ select {
 /***************
     Nav List
 ***************/
+#nav-mobile {
+  position: fixed;
+  width: 240px;
+  left: -105%;
+  top: 0;
+  margin: 0;
+  height: 100%;
+  height: calc(100% + 60px);
+  height: -moz-calc(100%);
+  padding-bottom: 60px;
+  background-color: #fff;
+  z-index: 999;
+  overflow-y: auto;
+  will-change: left; }
+  #nav-mobile li {
+    float: none;
+    line-height: 64px; }
+  #nav-mobile a {
+    color: #444;
+    display: block;
+    font-size: 1rem;
+    height: 64px;
+    line-height: 64px;
+    padding: 0 30px; }
+    #nav-mobile a:hover {
+      background-color: rgba(0, 0, 0, 0.05); }
+    #nav-mobile a#download-button, #nav-mobile a#download-button, #nav-mobile a#github-button {
+      margin: 10px 15px; }
+    #nav-mobile a#download-button, #nav-mobile a#download-button {
+      color: #fff; }
+    #nav-mobile a#github-button {
+      color: #343434; }
+    #nav-mobile a#download-button:hover, #nav-mobile a#download-button:hover {
+      background-color: #2bbbad; }
+#nav-mobile a {
+  display: block;
+  padding: 0 30px;
+  color: #444; }
+
+#nav-mobile {
+  left: 0;
+  position: fixed; }
+@media only screen and (max-width: 992px) {
+  #nav-mobile {
+    left: -105%; } }
 #sidenav-overlay {
   position: fixed;
   top: 0;

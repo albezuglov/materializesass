@@ -837,8 +837,11 @@ body.parallax-demo footer {
   width: 190px !important;
 }
 
+#nav-mobile { @extend %side-nav; @extend %fixed; }
+
 // Search
 #nav-mobile li.search {
+
   &:hover { background-color: #fff; }
 
   position: absolute;
