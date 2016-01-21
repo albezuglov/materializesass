@@ -397,8 +397,11 @@ ul {
   ul li {
     list-style-type: none; }
 
-nav {
+nav, #download-button {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+
+#download-button:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
 
 blockquote {
   margin: 20px 0;
@@ -407,6 +410,9 @@ blockquote {
 
 i {
   line-height: inherit; }
+  i#github-button {
+    float: right;
+    margin-left: 15px; }
 /*********************
   Transition Classes
 **********************/
@@ -414,7 +420,7 @@ i {
   Media Query Classes
 **********************/
 @media only screen and (max-width: 600px) {
-  .tabs-wrapper {
+  #github-button, .tabs-wrapper {
     display: none !important; } }
 
 @media only screen and (max-width: 600px) {
@@ -460,8 +466,11 @@ td, th {
 /*******************
   Utility Classes
 *******************/
-#index-banner h4 {
+#index-banner h4, .banner-container div {
   text-align: center; }
+
+#github-button {
+  float: right !important; }
 
 input[type=range] {
   -webkit-touch-callout: none;
@@ -543,41 +552,41 @@ input[type=range] {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
 /* Start Icons */
-.container {
+.container, .banner-container {
   margin: 0 auto;
   max-width: 1280px;
   width: 90%; }
 
 @media only screen and (min-width: 601px) {
-  .container {
+  .container, .banner-container {
     width: 85%; } }
 @media only screen and (min-width: 993px) {
-  .container {
+  .container, .banner-container {
     width: 70%; } }
-.container .row {
+.container .row, .banner-container .row, .banner-container div {
   margin-left: -0.75rem;
   margin-right: -0.75rem; }
 
-#index-banner {
+.section, #index-banner {
   padding-top: 1rem;
   padding-bottom: 1rem; }
   #index-banner {
     padding-bottom: 0; }
-.row {
+.row, .banner-container div {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px; }
-  .row:after {
+  .row:after, .banner-container div:after {
     content: "";
     display: table;
     clear: both; }
-  .row #index-banner h4, #index-banner .row h4 {
+  .row #index-banner h4, #index-banner .row h4, .banner-container div #index-banner h4, #index-banner .banner-container div h4 {
     float: left;
     box-sizing: border-box;
     padding: 0 0.75rem; }
-    .row #index-banner h4[class*="push-"], #index-banner .row h4[class*="push-"], .row #index-banner h4[class*="pull-"], #index-banner .row h4[class*="pull-"] {
+    .row #index-banner h4[class*="push-"], #index-banner .row h4[class*="push-"], .banner-container div #index-banner h4[class*="push-"], #index-banner .banner-container div h4[class*="push-"], .row #index-banner h4[class*="pull-"], #index-banner .row h4[class*="pull-"], .banner-container div #index-banner h4[class*="pull-"], #index-banner .banner-container div h4[class*="pull-"] {
       position: relative; }
-    .row #index-banner h4, #index-banner .row h4 {
+    .row #index-banner h4, #index-banner .row h4, .banner-container div #index-banner h4, #index-banner .banner-container div h4 {
       width: 100%;
       margin-left: auto;
       left: auto;
@@ -609,6 +618,10 @@ nav {
       display: inline-block;
       padding: 0 15px;
       cursor: pointer; }
+      nav ul a#download-button, nav ul a#download-button, nav ul a#github-button {
+        margin-top: -2px;
+        margin-left: 15px;
+        margin-right: 15px; }
       nav ul a:hover {
         background-color: rgba(0, 0, 0, 0.1); }
 @media only screen and (min-width: 601px) {
@@ -726,6 +739,61 @@ small {
       right: 7%;
       max-width: 86%; } }
 
+#download-button,
+#github-button {
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  outline: 0;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent; }
+
+#download-button:disabled
+#download-button:disabled {
+  background-color: #DFDFDF !important;
+  box-shadow: none;
+  color: #9F9F9F !important;
+  cursor: default; }
+  #download-button:disabled
+  #download-button:disabled * {
+    pointer-events: none; }
+  #download-button:disabled
+  #download-button:disabled:hover {
+    background-color: #DFDFDF !important;
+    color: #9F9F9F !important; }
+
+#download-button i,
+#download-button i,
+#github-button i {
+  font-size: 1.3rem;
+  line-height: inherit; }
+
+#download-button {
+  text-decoration: none;
+  color: #fff;
+  background-color: #26a69a;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: .2s ease-out;
+  cursor: pointer; }
+  #download-button:hover {
+    background-color: #2bbbad; }
+
+#github-button {
+  box-shadow: none;
+  background-color: transparent;
+  color: #343434;
+  cursor: pointer; }
+#download-button {
+  height: 54px;
+  line-height: 54px; }
+  #download-button i {
+    font-size: 1.6rem; }
+
 /*!
  * Waves v0.6.0
  * http://fian.my.id/Waves
@@ -734,6 +802,27 @@ small {
  * Released under the MIT license
  * https://github.com/fians/Waves/blob/master/LICENSE
  */
+#download-button, #github-button {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+  z-index: 1;
+  will-change: opacity, transform;
+  transition: all .3s ease-out; }
+  #download-button input[type="button"], #github-button input[type="button"], #download-button input[type="reset"], #github-button input[type="reset"], #download-button input[type="submit"], #github-button input[type="submit"] {
+    border: 0;
+    font-style: normal;
+    font-size: inherit;
+    text-transform: inherit;
+    background: none; }
+
 /* Firefox Bug: link not triggered */
 #materialbox-overlay {
   position: fixed;
@@ -1665,12 +1754,12 @@ a.button-collapse.top-nav {
   background-color: #ee6e73; }
   #index-banner .container {
     position: relative; }
-  #index-banner .header {
-    color: #FFF; }
   #index-banner h4 {
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    color: #fff; }
   #index-banner h1 {
-    margin-top: 16px; }
+    margin-top: 16px;
+    color: #fff; }
 
 @media only screen and (max-width: 992px) {
   #index-banner h1 {
@@ -1680,6 +1769,12 @@ a.button-collapse.top-nav {
 @media only screen and (max-width: 600px) {
   #index-banner h4 {
     margin-bottom: 0; } }
+.banner-container {
+  color: #fff; }
+
+.github-link {
+  color: #f6b2b5; }
+
 .github-commit {
   padding: 14px 0;
   height: 64px;
@@ -1692,6 +1787,7 @@ a.button-collapse.top-nav {
   .github-commit {
     text-align: center; } }
 #github-button {
+  color: #fafafa;
   background-color: #6f6d6d;
   transition: .25s ease; }
   #github-button:hover {
