@@ -1,18 +1,18 @@
-.materialboxed {
+%materialboxed {
   display: block;
   cursor: zoom-in;
   position: relative;
   transition: opacity .4s;
 
   &:hover {
-    &:not(.active) {
+    &:not(%active) {
       opacity: .8;
     }
     will-change: left, top, width, height;
   }
 }
 
-.materialboxed.active {
+%materialboxed%active {
   cursor: zoom-out;
 }
 
@@ -27,7 +27,7 @@
 
   will-change: opacity;
 }
-.materialbox-caption {
+%materialbox-caption {
   position: fixed;
   display: none;
   color: #fff;

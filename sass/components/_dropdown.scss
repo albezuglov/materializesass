@@ -1,5 +1,5 @@
-.dropdown-content {
-  @extend .z-depth-1;
+%dropdown-content {
+  @extend %z-depth-1;
   background-color: $dropdown-bg-color;
   margin: 0;
   display: none;
@@ -21,15 +21,15 @@
     text-align: left;
     text-transform: none;
 
-    &:hover, &.active, &.selected {
+    &:hover, &%active, &%selected {
       background-color: $dropdown-hover-bg-color;
     }
 
-    &.active.selected {
+    &%active%selected {
       background-color: darken($dropdown-hover-bg-color, 5%);
     }
 
-    &.divider {
+    &%divider {
       min-height: 0;
       height: 1px;
     }

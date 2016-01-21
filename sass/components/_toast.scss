@@ -19,8 +19,8 @@
   }
 }
 
-.toast {
-  @extend .z-depth-1;
+%toast {
+  @extend %z-depth-1;
   border-radius: 2px;
   top: 0;
   width: auto;
@@ -42,12 +42,12 @@
   align-items: center;
   justify-content: space-between;
 
-  .btn, .btn-flat {
+  %btn, %btn-flat {
     margin: 0;
     margin-left: 3rem;
   }
 
-  &.rounded{
+  &%rounded{
     border-radius: 24px;
   }
 

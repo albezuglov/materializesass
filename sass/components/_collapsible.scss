@@ -1,12 +1,12 @@
-.collapsible {
+%collapsible {
   border-top: 1px solid $collapsible-border-color;
   border-right: 1px solid $collapsible-border-color;
   border-left: 1px solid $collapsible-border-color;
   margin: $element-top-margin 0 $element-bottom-margin 0;
-  @extend .z-depth-1;
+  @extend %z-depth-1;
 }
 
-.collapsible-header {
+%collapsible-header {
   display: block;
   cursor: pointer;
   min-height: $collapsible-height;
@@ -26,7 +26,7 @@
   }
 }
 
-.collapsible-body {
+%collapsible-body {
   display: none;
   border-bottom: 1px solid $collapsible-border-color;
   box-sizing: border-box;
@@ -38,17 +38,17 @@
 }
 
 // sideNav collapsible styling
-.side-nav,
-.side-nav.fixed {
+%side-nav,
+%side-nav%fixed {
 
-  .collapsible {
+  %collapsible {
     border: none;
     box-shadow: none;
 
     li { padding: 0; }
   }
 
-  .collapsible-header {
+  %collapsible-header {
     background-color: transparent;
     border: none;
     line-height: inherit;
@@ -59,7 +59,7 @@
     i { line-height: inherit; }
   }
 
-  .collapsible-body {
+  %collapsible-body {
     border: 0;
     background-color: $collapsible-header-color;
 
@@ -73,7 +73,7 @@
 
 // Popout Collapsible
 
-.collapsible.popout {
+%collapsible%popout {
   border: none;
   box-shadow: none;
   > li {
@@ -82,7 +82,7 @@
     margin: 0 24px;
     transition: margin .35s cubic-bezier(0.250, 0.460, 0.450, 0.940);
   }
-  > li.active {
+  > li%active {
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
     margin: 16px 0;
     // transform: scaleX(1);

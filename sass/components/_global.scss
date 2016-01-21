@@ -31,11 +31,11 @@ a {
 
 
 // Positioning
-.valign-wrapper {
+%valign-wrapper {
   display: flex;
   align-items: center;
 
-  .valign {
+  %valign {
     display: block;
   }
 }
@@ -49,47 +49,47 @@ ul {
 }
 
 // classic clearfix
-.clearfix {
+%clearfix {
   clear: both;
 }
 
 
 // Z-levels
-.z-depth-0 {
+%z-depth-0 {
   box-shadow: none !important;
 }
-.z-depth-1{
+%z-depth-1{
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
-.z-depth-1-half{
+%z-depth-1-half{
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
-.z-depth-2{
+%z-depth-2{
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.z-depth-3{
+%z-depth-3{
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-.z-depth-4{
+%z-depth-4{
   box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
 }
-.z-depth-5{
+%z-depth-5{
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
 
-.hoverable {
+%hoverable {
   transition: box-shadow .25s;
   box-shadow: 0;
 }
 
-.hoverable:hover {
+%hoverable:hover {
   transition: box-shadow .25s;
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 // Dividers
 
-.divider {
+%divider {
   height: 1px;
   overflow: hidden;
   background-color: color("grey", "lighten-2");
@@ -109,31 +109,31 @@ blockquote {
 i {
   line-height: inherit;
 
-  &.left {
+  &%left {
     float: left;
     margin-right: 15px;
   }
-  &.right {
+  &%right {
     float: right;
     margin-left: 15px;
   }
-  &.tiny {
+  &%tiny {
     font-size: 1rem;
   }
-  &.small {
+  &%small {
     font-size: 2rem;
   }
-  &.medium {
+  &%medium {
     font-size: 4rem;
   }
-  &.large {
+  &%large {
     font-size: 6rem;
   }
 }
 
 // Images
-img.responsive-img,
-video.responsive-video {
+img%responsive-img,
+video%responsive-video {
   max-width: 100%;
   height: auto;
 }
@@ -141,7 +141,7 @@ video.responsive-video {
 
 // Pagination
 
-.pagination {
+%pagination {
 
   li {
     display: inline-block;
@@ -153,11 +153,11 @@ video.responsive-video {
 
     a { color: #444; }
 
-    &.active a { color: #fff; }
+    &%active a { color: #fff; }
 
-    &.active { background-color: $primary-color; }
+    &%active { background-color: $primary-color; }
 
-    &.disabled a {
+    &%disabled a {
       cursor: default;
       color: #999;
     }
@@ -169,21 +169,21 @@ video.responsive-video {
   }
 
 
-  li.pages ul li {
+  li%pages ul li {
     display: inline-block;
     float: none;
   }
 }
 @media #{$medium-and-down} {
-  .pagination {
+  %pagination {
     width: 100%;
 
-    li.prev,
-    li.next {
+    li%prev,
+    li%next {
       width: 10%;
     }
 
-    li.pages {
+    li%pages {
       width: 80%;
       overflow: hidden;
       white-space: nowrap;
@@ -192,13 +192,13 @@ video.responsive-video {
 }
 
 // Breadcrumbs
-.breadcrumb {
+%breadcrumb {
   font-size: 18px;
   color: rgba(255,255,255, .7);
 
   i,
   [class^="mdi-"], [class*="mdi-"],
-  i.material-icons {
+  i%material-icons {
     display: inline-block;
     float: left;
     font-size: 24px;
@@ -228,13 +228,13 @@ video.responsive-video {
 
 
 // Parallax
-.parallax-container {
+%parallax-container {
   position: relative;
   overflow: hidden;
   height: 500px;
 }
 
-.parallax {
+%parallax {
   position: absolute;
   top: 0;
   left: 0;
@@ -256,10 +256,10 @@ video.responsive-video {
 }
 
 // Pushpin
-.pin-top, .pin-bottom {
+%pin-top, %pin-bottom {
   position: relative;
 }
-.pinned {
+%pinned {
   position: fixed !important;
 }
 
@@ -267,11 +267,11 @@ video.responsive-video {
   Transition Classes
 **********************/
 
-ul.staggered-list li {
+ul%staggered-list li {
   opacity: 0;
 }
 
-.fade-in {
+%fade-in {
   opacity: 0;
   transform-origin: 0 50%;
 }
@@ -280,52 +280,52 @@ ul.staggered-list li {
 /*********************
   Media Query Classes
 **********************/
-.hide-on-small-only, .hide-on-small-and-down {
+%hide-on-small-only, %hide-on-small-and-down {
   @media #{$small-and-down} {
     display: none !important;
   }
 }
-.hide-on-med-and-down {
+%hide-on-med-and-down {
   @media #{$medium-and-down} {
     display: none !important;
   }
 }
-.hide-on-med-and-up {
+%hide-on-med-and-up {
   @media #{$medium-and-up} {
     display: none !important;
   }
 }
-.hide-on-med-only {
+%hide-on-med-only {
   @media only screen and (min-width: $small-screen) and (max-width: $medium-screen) {
     display: none !important;
   }
 }
-.hide-on-large-only {
+%hide-on-large-only {
   @media #{$large-and-up} {
     display: none !important;
   }
 }
-.show-on-large {
+%show-on-large {
   @media #{$large-and-up} {
     display: block !important;
   }
 }
-.show-on-medium {
+%show-on-medium {
   @media only screen and (min-width: $small-screen) and (max-width: $medium-screen) {
     display: block !important;
   }
 }
-.show-on-small {
+%show-on-small {
   @media #{$small-and-down} {
     display: block !important;
   }
 }
-.show-on-medium-and-up {
+%show-on-medium-and-up {
   @media #{$medium-and-up} {
     display: block !important;
   }
 }
-.show-on-medium-and-down {
+%show-on-medium-and-down {
   @media #{$medium-and-down} {
     display: block !important;
   }
@@ -333,25 +333,25 @@ ul.staggered-list li {
 
 
 // Center text on mobile
-.center-on-small-only {
+%center-on-small-only {
   @media #{$small-and-down} {
     text-align: center;
   }
 }
 
 // Footer
-footer.page-footer {
+footer%page-footer {
   margin-top: 20px;
   padding-top: 20px;
   background-color: $footer-bg-color;
 
-  .footer-copyright {
+  %footer-copyright {
     overflow: hidden;
     height: 50px;
     line-height: 50px;
     color: rgba(255,255,255,.8);
     background-color: rgba(51,51,51,.08);
-    @extend .light;
+    @extend %light;
   }
 }
 
@@ -364,12 +364,12 @@ table {
   width:100%;
   display: table;
 
-  &.bordered > thead > tr,
-  &.bordered > tbody > tr {
+  &%bordered > thead > tr,
+  &%bordered > tbody > tr {
     border-bottom: 1px solid $table-border-color;
   }
 
-  &.striped > tbody {
+  &%striped > tbody {
     > tr:nth-child(odd) {
       background-color: $table-striped-color;
     }
@@ -379,14 +379,14 @@ table {
     }
   }
 
-  &.highlight > tbody > tr {
+  &%highlight > tbody > tr {
     transition: background-color .25s ease;
     &:hover {
       background-color: $table-striped-color;
     }
   }
 
-  &.centered {
+  &%centered {
     thead tr th, tbody tr td {
       text-align: center;
 
@@ -410,7 +410,7 @@ td, th{
 // Responsive Table
 @media #{$medium-and-down} {
 
-  table.responsive-table {
+  table%responsive-table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
@@ -466,7 +466,7 @@ td, th{
       border-right: 1px solid $table-border-color;
     }
 
-    &.bordered {
+    &%bordered {
       th { border-bottom: 0; border-left: 0; }
       td { border-left: 0; border-right: 0; border-bottom: 0; }
       tr { border: 0; }
@@ -479,14 +479,14 @@ td, th{
 
 
 // Collections
-.collection {
+%collection {
   margin: $element-top-margin 0 $element-bottom-margin 0;
   border: 1px solid $collection-border-color;
   border-radius: 2px;
   overflow: hidden;
   position: relative;
 
-  .collection-item {
+  %collection-item {
     background-color: $collection-bg-color;
     line-height: 1.5rem;
     padding: 10px 20px;
@@ -494,12 +494,12 @@ td, th{
     border-bottom: 1px solid $collection-border-color;
 
     // Avatar Collection
-    &.avatar {
+    &%avatar {
       min-height: 84px;
       padding-left: 72px;
       position: relative;
 
-      .circle {
+      %circle {
         position: absolute;
         width: 42px;
         height: 42px;
@@ -508,7 +508,7 @@ td, th{
         display: inline-block;
         vertical-align: middle;
       }
-      i.circle {
+      i%circle {
         font-size: 18px;
         line-height: 42px;
         color: #fff;
@@ -517,7 +517,7 @@ td, th{
       }
 
 
-      .title {
+      %title {
         font-size: 16px;
       }
 
@@ -525,7 +525,7 @@ td, th{
         margin: 0;
       }
 
-      .secondary-content {
+      %secondary-content {
         position: absolute;
         top: 16px;
         right: 16px;
@@ -538,47 +538,47 @@ td, th{
       border-bottom: none;
     }
 
-    &.active {
+    &%active {
       background-color: $collection-active-bg-color;
       color: $collection-active-color;
 
-      .secondary-content {
+      %secondary-content {
         color: #fff;
       }
     }
   }
-  a.collection-item{
+  a%collection-item{
     display: block;
     transition: .25s;
     color: $collection-link-color;
-    &:not(.active) {
+    &:not(%active) {
       &:hover {
         background-color: $collection-hover-bg-color;
       }
     }
   }
 
-  &.with-header {
-    .collection-header {
+  &%with-header {
+    %collection-header {
       background-color: $collection-bg-color;
       border-bottom: 1px solid $collection-border-color;
       padding: 10px 20px;
     }
-    .collection-item {
+    %collection-item {
       padding-left: 30px;
     }
-    .collection-item.avatar {
+    %collection-item%avatar {
       padding-left: 72px;
     }
   }
 
 }
 // Made less specific to allow easier overriding
-.secondary-content {
+%secondary-content {
   float: right;
   color: $secondary-color;
 }
-.collapsible .collection {
+%collapsible %collection {
   margin: 0;
   border: none;
 }
@@ -586,7 +586,7 @@ td, th{
 
 
 // Badges
-span.badge {
+span%badge {
   min-width: 3rem;
   padding: 0 6px;
   text-align: center;
@@ -597,25 +597,25 @@ span.badge {
   right: 15px;
   box-sizing: border-box;
 
-  &.new {
+  &%new {
     font-weight: 300;
     font-size: 0.8rem;
     color: #fff;
     background-color: $badge-bg-color;
     border-radius: 2px;
   }
-  &.new:after {
+  &%new:after {
     content: " new";
   }
 }
-nav ul a span.badge {
+nav ul a span%badge {
   position: static;
   margin-left: 4px;
   line-height: 0;
 }
 
 // Responsive Videos
-.video-container {
+%video-container {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
@@ -631,7 +631,7 @@ nav ul a span.badge {
 }
 
 // Progress Bar
-.progress {
+%progress {
     position: relative;
     height: 4px;
     display: block;
@@ -640,7 +640,7 @@ nav ul a span.badge {
     border-radius: 2px;
     margin: $element-top-margin 0 $element-bottom-margin 0;
     overflow: hidden;
-  .determinate {
+  %determinate {
     position: absolute;
     background-color: inherit;
     top: 0;
@@ -649,7 +649,7 @@ nav ul a span.badge {
     background-color: $progress-bar-color;
     transition: width .3s linear;
   }
-  .indeterminate {
+  %indeterminate {
     background-color: $progress-bar-color;
     &:before {
       content: '';
@@ -712,30 +712,30 @@ nav ul a span.badge {
   Utility Classes
 *******************/
 
-.hide {
+%hide {
   display: none !important;
 }
 
 // Text Align
-.left-align {
+%left-align {
   text-align: left;
 }
-.right-align {
+%right-align {
   text-align: right
 }
-.center, .center-align {
+%center, %center-align {
   text-align: center;
 }
 
-.left {
+%left {
   float: left !important;
 }
-.right {
+%right {
   float: right !important;
 }
 
 // No Text Select
-.no-select {
+%no-select {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -744,23 +744,23 @@ nav ul a span.badge {
   user-select: none;
 }
 
-.circle {
+%circle {
   border-radius: 50%;
 }
 
-.center-block {
+%center-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.truncate {
+%truncate {
   display: block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.no-padding {
+%no-padding {
   padding: 0 !important;
 }

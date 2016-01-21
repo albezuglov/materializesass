@@ -1,10 +1,10 @@
-.slider {
+%slider {
   position: relative;
   height: 400px;
   width: 100%;
 
   // Fullscreen slider
-  &.fullscreen {
+  &%fullscreen {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -13,17 +13,17 @@
     right: 0;
     bottom: 0;
 
-    ul.slides {
+    ul%slides {
       height: 100%;
     }
 
-    ul.indicators {
+    ul%indicators {
       z-index: 2;
       bottom: 30px;
     }
   }
 
-  .slides {
+  %slides {
     background-color: $slider-bg-color;
     margin: 0;
     height: 400px;
@@ -45,7 +45,7 @@
         background-position: center;
       }
 
-      .caption {
+      %caption {
         color: #fff;
         position: absolute;
         top: 15%;
@@ -56,14 +56,14 @@
         p { color: $slider-bg-color-light; }
       }
 
-      &.active {
+      &%active {
         z-index: 2;
       }
     }
   }
 
 
-  .indicators {
+  %indicators {
     position: absolute;
     text-align: center;
     left: 0;
@@ -71,7 +71,7 @@
     bottom: 0;
     margin: 0;
 
-    .indicator-item {
+    %indicator-item {
       display: inline-block;
       position: relative;
       cursor: pointer;
@@ -83,7 +83,7 @@
       transition: background-color .3s;
       border-radius: 50%;
 
-      &.active {
+      &%active {
         background-color: $slider-indicator-color;
       }
     }

@@ -46,7 +46,7 @@ input[type=datetime-local],
 input[type=tel],
 input[type=number],
 input[type=search],
-textarea.materialize-textarea {
+textarea%materialize-textarea {
 
   // General Styles
   background-color: transparent;
@@ -83,33 +83,33 @@ textarea.materialize-textarea {
     color: $input-focus-color;
   }
   // Valid Input Style
-  &.valid,
-  &:focus.valid {
+  &%valid,
+  &:focus%valid {
     border-bottom: 1px solid $input-success-color;
     box-shadow: 0 1px 0 0 $input-success-color;
   }
   // Custom Success Message
-  &.valid + label:after,
-  &:focus.valid + label:after {
+  &%valid + label:after,
+  &:focus%valid + label:after {
     content: attr(data-success);
     color: $input-success-color;
     opacity: 1;
   }
   // Invalid Input Style
-  &.invalid,
-  &:focus.invalid {
+  &%invalid,
+  &:focus%invalid {
     border-bottom: 1px solid $input-error-color;
     box-shadow: 0 1px 0 0 $input-error-color;
   }
   // Custom Error message
-  &.invalid + label:after,
-  &:focus.invalid + label:after {
+  &%invalid + label:after,
+  &:focus%invalid + label:after {
     content: attr(data-error);
     color: $input-error-color;
     opacity: 1;
   }
   // Full width label when using validate for error messages
-  &.validate + label {
+  &%validate + label {
     width: 100%;
     z-index: -1;
   }
@@ -126,7 +126,7 @@ textarea.materialize-textarea {
 }
 
 // Styling for input field wrapper
-.input-field {
+%input-field {
   position: relative;
   margin-top: 1rem;
 
@@ -139,37 +139,37 @@ textarea.materialize-textarea {
     cursor: text;
     transition: .2s ease-out;
   }
-  label.active {
+  label%active {
     font-size: $label-font-size;
     transform: translateY(-140%);
   }
 
   // Prefix Icons
-  .prefix {
+  %prefix {
     position: absolute;
     width: 3rem;
     font-size: 2rem;
     transition: color .2s;
 
-    &.active { color: $input-focus-color; }
+    &%active { color: $input-focus-color; }
   }
-  .prefix ~ input,
-  .prefix ~ textarea {
+  %prefix ~ input,
+  %prefix ~ textarea {
     margin-left: 3rem;
     width: 92%;
     width: calc(100% - 3rem);
   }
-  .prefix ~ textarea { padding-top: .8rem; }
-  .prefix ~ label { margin-left: 3rem; }
+  %prefix ~ textarea { padding-top: .8rem; }
+  %prefix ~ label { margin-left: 3rem; }
 
   @media #{$medium-and-down} {
-    .prefix ~ input {
+    %prefix ~ input {
       width: 86%;
       width: calc(100% - 3rem);
     }
   }
   @media #{$small-and-down} {
-    .prefix ~ input {
+    %prefix ~ input {
       width: 80%;
       width: calc(100% - 3rem);
     }
@@ -177,7 +177,7 @@ textarea.materialize-textarea {
 }
 
 // Search Field
-.input-field input[type=search] {
+%input-field input[type=search] {
   display: block;
   line-height: inherit;
   padding-left: 4rem;
@@ -190,8 +190,8 @@ textarea.materialize-textarea {
     color: #444;
 
     & + label i,
-    & ~ .mdi-navigation-close,
-    & ~ .material-icons {
+    & ~ %mdi-navigation-close,
+    & ~ %material-icons {
       color: #444;
     }
   }
@@ -200,8 +200,8 @@ textarea.materialize-textarea {
     left: 1rem;
   }
 
-  & ~ .mdi-navigation-close,
-  & ~ .material-icons {
+  & ~ %mdi-navigation-close,
+  & ~ %material-icons {
     position: absolute;
     top: 0;
     right: 1rem;
@@ -219,7 +219,7 @@ textarea {
    height: 3rem;
    background-color: transparent;
 
-  &.materialize-textarea {
+  &%materialize-textarea {
     overflow-y: hidden; /* prevents scroll bar flash */
     padding: 1.6rem 0; /* prevents text jump on Enter keypress */
     resize: none;
@@ -228,7 +228,7 @@ textarea {
 }
 
 // For textarea autoresize
-.hiddendiv {
+%hiddendiv {
   display: none;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -304,11 +304,11 @@ textarea {
 }
 
 /* Radio With gap */
-[type="radio"].with-gap:checked + label:before {
+[type="radio"]%with-gap:checked + label:before {
   border-radius: 50%;
   border: 2px solid $radio-fill-color;
 }
-[type="radio"].with-gap:checked + label:after {
+[type="radio"]%with-gap:checked + label:after {
   border-radius: 50%;
   border: 2px solid $radio-fill-color;
   background-color: $radio-fill-color;
@@ -317,15 +317,15 @@ textarea {
 }
 
 /* Focused styles */
-[type="radio"].tabbed:focus + label:before {
+[type="radio"]%tabbed:focus + label:before {
   box-shadow: 0px 0px 0px 10px rgba(0,0,0,.1);
 }
 
 /* Disabled Radio With gap */
-[type="radio"].with-gap:disabled:checked + label:before {
+[type="radio"]%with-gap:disabled:checked + label:before {
   border: 2px solid $input-disabled-color;
 }
-[type="radio"].with-gap:disabled:checked + label:after {
+[type="radio"]%with-gap:disabled:checked + label:after {
   border: none;
   background-color: $input-disabled-color;
 }
@@ -389,7 +389,7 @@ form p:last-child {
 
   /* checkbox aspect */
   + label:before,
-  &:not(.filled-in) + label:after {
+  &:not(%filled-in) + label:after {
     content: '';
     position: absolute;
     top: 0;
@@ -402,7 +402,7 @@ form p:last-child {
     margin-top: 2px;
     transition: .2s;
   }
-  &:not(.filled-in) + label:after {
+  &:not(%filled-in) + label:after {
     border: 0;
     transform: scale(0);
   }
@@ -413,7 +413,7 @@ form p:last-child {
   }
 
   // Focused styles
-  &.tabbed:focus + label:after {
+  &%tabbed:focus + label:after {
     transform: scale(1);
     border: 0;
     border-radius: 50%;
@@ -465,7 +465,7 @@ form p:last-child {
 }
 
 // Filled in Style
-[type="checkbox"].filled-in {
+[type="checkbox"]%filled-in {
   // General
   + label:after {
     border-radius: 2px;
@@ -532,12 +532,12 @@ form p:last-child {
   }
 
   // Focused styles
-  &.tabbed:focus + label:after {
+  &%tabbed:focus + label:after {
     border-radius: 2px;
     border-color: $radio-empty-color;
     background-color: rgba(0,0,0,.1);
   }
-  &.tabbed:checked:focus + label:after {
+  &%tabbed:checked:focus + label:after {
     border-radius: 2px;
     background-color: $secondary-color;
     border-color: $secondary-color;
@@ -567,33 +567,33 @@ form p:last-child {
 /***************
      Switch
 ***************/
-.switch,
-.switch * {
+%switch,
+%switch * {
     -webkit-user-select: none;
     -moz-user-select: none;
     -khtml-user-select: none;
     -ms-user-select: none;
 }
 
-.switch label {
+%switch label {
     cursor: pointer;
 }
 
-.switch label input[type=checkbox]{
+%switch label input[type=checkbox]{
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-.switch label input[type=checkbox]:checked + .lever {
+%switch label input[type=checkbox]:checked + %lever {
     background-color: $switch-checked-lever-bg;
 }
 
-.switch label input[type=checkbox]:checked + .lever:after {
+%switch label input[type=checkbox]:checked + %lever:after {
     background-color: $switch-bg-color;
 }
 
-.switch label .lever {
+%switch label %lever {
     content: "";
     display: inline-block;
     position: relative;
@@ -607,7 +607,7 @@ form p:last-child {
     margin: 0 16px;
 }
 
-.switch label .lever:after {
+%switch label %lever:after {
     content: "";
     position: absolute;
     display: inline-block;
@@ -622,38 +622,38 @@ form p:last-child {
 }
 
 // Switch active style
-input[type=checkbox]:checked:not(:disabled) ~ .lever:active:after {
+input[type=checkbox]:checked:not(:disabled) ~ %lever:active:after {
        box-shadow: 0 1px 3px 1px rgba(0,0,0,.4), 0 0 0 15px transparentize($switch-bg-color, .9);
 }
 
-input[type=checkbox]:not(:disabled) ~ .lever:active:after {
+input[type=checkbox]:not(:disabled) ~ %lever:active:after {
        box-shadow: 0 1px 3px 1px rgba(0,0,0,.4), 0 0 0 15px rgba(0, 0, 0, .08);
 }
 
-.switch label input[type=checkbox]:checked + .lever:after {
+%switch label input[type=checkbox]:checked + %lever:after {
     left: 24px;
 }
 
 // Disabled Styles
-.switch input[type=checkbox][disabled] + .lever{
+%switch input[type=checkbox][disabled] + %lever{
   cursor: default;
 }
-.switch label input[type=checkbox][disabled] + .lever:after,
-.switch label input[type=checkbox][disabled]:checked + .lever:after {
+%switch label input[type=checkbox][disabled] + %lever:after,
+%switch label input[type=checkbox][disabled]:checked + %lever:after {
     background-color: $input-disabled-solid-color;
 }
 
 /***************
   Select Field
 ***************/
-.select-label {
+%select-label {
   position: absolute;
 }
 
-.select-wrapper {
+%select-wrapper {
   position: relative;
 
-  input.select-dropdown {
+  input%select-dropdown {
     position: relative;
     cursor: pointer;
     // color: #444;
@@ -670,13 +670,13 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
     display: block;
   }
 
-  span.caret {
+  span%caret {
     color: initial;
     position: absolute;
     right: 0;
     top: 16px;
     font-size: 10px;
-    &.disabled {
+    &%disabled {
       color: $input-disabled-color;
     }
   }
@@ -689,14 +689,14 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
 }
 
 select { display: none; }
-select.browser-default { display: block; }
+select%browser-default { display: block; }
 
 // Disabled styles
 select:disabled {
   color: rgba(0,0,0,.3);
 }
 
-.select-wrapper input.select-dropdown:disabled {
+%select-wrapper input%select-dropdown:disabled {
   color: rgba(0,0,0,.3);
   cursor: default;
   -webkit-user-select: none; /* webkit (safari, chrome) browsers */
@@ -705,19 +705,19 @@ select:disabled {
   border-bottom: 1px solid rgba(0,0,0,.3);
 }
 
-.select-wrapper i {
+%select-wrapper i {
   color: rgba(0,0,0,.3);
 }
 
-.select-dropdown li.disabled,
-.select-dropdown li.disabled > span,
-.select-dropdown li.optgroup {
+%select-dropdown li%disabled,
+%select-dropdown li%disabled > span,
+%select-dropdown li%optgroup {
   color: rgba(0,0,0,.3);
   background-color: transparent;
 }
 
 // Icons
-.select-dropdown li {
+%select-dropdown li {
   img {
     height: $dropdown-item-height - 10;
     width: $dropdown-item-height - 10;
@@ -727,10 +727,10 @@ select:disabled {
 }
 
 // Optgroup styles
-.select-dropdown li.optgroup {
+%select-dropdown li%optgroup {
   border-top: 1px solid $dropdown-hover-bg-color;
 
-  &.selected > span {
+  &%selected > span {
     color: rgba(0, 0, 0, .7);
   }
 
@@ -738,7 +738,7 @@ select:disabled {
     color: rgba(0, 0, 0, .4);
   }
 
-  & ~ li:not(.optgroup) {
+  & ~ li:not(%optgroup) {
     padding-left: 1rem;
   }
 }
@@ -746,17 +746,17 @@ select:disabled {
 /*********************
       File Input
 **********************/
-.file-field {
+%file-field {
   position: relative;
 
-  .file-path-wrapper {
+  %file-path-wrapper {
     overflow: hidden;
     padding-left: 10px;
   }
 
-  input.file-path { width: 100%; }
+  input%file-path { width: 100%; }
 
-  .btn {
+  %btn {
     float: left;
     height: 3rem;
     line-height: 3rem;
@@ -786,12 +786,12 @@ select:disabled {
       Range
 ***************/
 
-.range-field {
+%range-field {
   position: relative;
 }
 
-input[type=range], input[type=range] + .thumb {
-  @extend .no-select;
+input[type=range], input[type=range] + %thumb {
+  @extend %no-select;
   cursor: pointer;
 }
 
@@ -804,7 +804,7 @@ input[type=range] {
   margin: 15px 0px;
   padding: 0;
 }
-input[type=range] + .thumb {
+input[type=range] + %thumb {
   position: absolute;
   border: none;
   height: 0;
@@ -817,7 +817,7 @@ input[type=range] + .thumb {
   transform-origin: 50% 50%;
   transform: rotate(-45deg);
 
-  .value {
+  %value {
     display: block;
     width: 30px;
     text-align: center;
@@ -826,10 +826,10 @@ input[type=range] + .thumb {
     transform: rotate(45deg);
   }
 
-  &.active {
+  &%active {
     border-radius: 50% 50% 50% 0;
 
-    .value {
+    %value {
       color: $input-bg-color;
       margin-left: -1px;
       margin-top: 8px;
